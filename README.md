@@ -1,137 +1,152 @@
-# Job Search HQ
+<div align="center">
 
-**A zero-dependency, single-file job search command center** — built for senior professionals targeting multi-region markets simultaneously.
+# 🎯 Job Search HQ
+
+### A zero-dependency, single-file job search command center
+
+*Built for senior professionals targeting multi-region markets simultaneously.*
+
+<br>
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen?style=flat-square)
+![Build](https://img.shields.io/badge/build-none-blue?style=flat-square)
+![Single File](https://img.shields.io/badge/architecture-single--file-orange?style=flat-square)
+![License](https://img.shields.io/badge/license-MIT-lightgrey?style=flat-square)
+![Offline](https://img.shields.io/badge/works-offline-success?style=flat-square)
+
+<br>
 
 ![screenshot](screenshot.png)
 
----
-
-## What it does
-
-Most job searches are chaotic — 12 browser tabs open, lost bookmarks, no sense of where you applied or when. This tool replaces that chaos with a structured command center, purpose-built for senior roles across MENA, UK, and EU markets.
-
-Open one HTML file. Everything runs locally in your browser. No server, no login, no SaaS subscription.
+</div>
 
 ---
 
-## Features
+## 📖 Table of Contents
 
-**Search Engine**
-- Boolean query builder — generates `short` and `full boolean` strings ready to paste into any job board
-- Filters for date range, job type, seniority level, and sector
-- One-click launch across 32 platforms simultaneously
-
-**Platform Directory**
-- 32 pre-configured job boards with Smart Search links (pre-filled query) and Base Portal links
-- Covers MENA (Bayt, GulfTalent, Naukri Gulf, Jadarat, NEOM, Aramco, QatarEnergy), UK/EU (LinkedIn, Indeed, Reed, Energy Jobline, IrishJobs), and Asia
-- English-first filter mode highlights English-language EU platforms
-
-**Company Intelligence**
-- 32+ target companies with region tags, sector metadata, direct careers portal links, and LinkedIn shortcuts
-- Filter by region or sector; search by name
-- Fully editable — add, remove, or update companies in-browser
-
-**Application Tracker**
-- Kanban-style pipeline: Bookmarked → Applied → Interview → Offer → Rejected
-- Add applications manually with role, company, location, salary, notes
-- Sort by date, score, or company; filter by status
-- Export / import tracker data as JSON
-
-**Government Portals**
-- 14 official government job portals across EU, Asia, Gulf, and visa-specific boards
-- English-language availability flagged per portal
-- Filter by region
-
-**Recruiter CRM**
-- Track recruiter contacts with agency, region, specialisation, and last contact date
-- Status tagging: Active, Warm, Cold
-
-**ATS Matcher**
-- Paste a job description; the tool scores your CV against it and surfaces missing keywords
-- Helps tailor applications before submission
-
-**Interview Prep**
-- Role-specific question banks for Cost Manager, Commercial Manager, Procurement, and Renewable Energy positions
-
-**Timing Intelligence**
-- Live widget showing optimal application time based on recruiter working hours across target time zones
+- [Why it exists](#-why-it-exists)
+- [Features](#-features)
+- [Quick start](#-quick-start)
+- [Keyboard shortcuts](#-keyboard-shortcuts)
+- [Customisation](#-customisation)
+- [Architecture decision](#-architecture-decision)
+- [Tech stack](#-tech-stack)
+- [Target profile](#-target-profile)
+- [License](#-license)
 
 ---
 
-## Architecture decision
+## 💡 Why it exists
 
-This is a deliberate single-file architecture. Every feature — UI, state, logic, data — lives in one `.html` file.
+Most job searches are chaotic — a dozen browser tabs, lost bookmarks, and no sense of where you applied or when. **Job Search HQ** replaces that chaos with a structured command center, purpose-built for senior roles across **MENA, UK, and EU** markets.
 
-That means:
-- **Zero build tooling** — no Webpack, no Node, no `npm install`
-- **Zero dependencies** — two Google Fonts and Tabler Icons (CDN, optional)
-- **Instant portability** — email it, put it on a USB drive, open it offline
-- **Stateless by design** — nothing persists without an explicit Export
-
-For a personal productivity tool with a single user, this is the correct tradeoff. A React + backend stack would add complexity without adding value.
+Open one HTML file. Everything runs locally in your browser. **No server, no login, no subscription.**
 
 ---
 
-## Usage
+## ⚡ Features
+
+| | Module | What it does |
+|---|---|---|
+| 🔍 | **Search Engine** | Boolean query builder generating `short` and `full boolean` strings; filters for date, type, seniority, and sector; one-click launch across 32 platforms |
+| 🌐 | **Platform Directory** | 32 pre-configured job boards with Smart Search (pre-filled query) and Base Portal links — MENA, UK/EU, and Asia — plus an English-first filter mode |
+| 🏢 | **Company Intelligence** | 32+ target companies with region/sector tags, careers links, and LinkedIn shortcuts; fully editable in-browser |
+| 📋 | **Application Tracker** | Kanban pipeline (Bookmarked → Applied → Interview → Offer → Rejected) with sorting, filtering, and JSON export/import |
+| 🏛️ | **Government Portals** | 14 official government portals across EU, Asia, Gulf, and visa-specific boards, with English availability flagged |
+| 🤝 | **Recruiter CRM** | Track recruiters by agency, region, and specialisation with Active / Warm / Cold status tags |
+| 🎯 | **ATS Matcher** | Paste a job description; score your CV against it and surface missing keywords before you submit |
+| 💬 | **Interview Prep** | Role-specific question banks for Cost Manager, Commercial Manager, Procurement, and Renewable Energy roles |
+| ⏰ | **Timing Intelligence** | Live widget showing optimal application time based on recruiter working hours across target time zones |
+
+---
+
+## 🚀 Quick start
+
+No installation. No build step. Just open the file:
 
 ```bash
-# No installation required
-# Just open the file in any modern browser
-
 open DG_JobSearch_HQ_v5.0.html
 ```
 
-**Keyboard shortcuts**
+> Works in any modern browser, fully offline. Nothing persists without an explicit **Export**.
+
+---
+
+## ⌨️ Keyboard shortcuts
 
 | Key | Action |
-|-----|--------|
+|:---:|--------|
 | `1` – `8` | Switch tabs |
 | `S` | Toggle sidebar |
 | `E` | Open edit mode |
 
 ---
 
-## Customisation
+## 🛠️ Customisation
 
 Everything is editable directly in the browser via **Edit Mode** (`E`):
 
 - Add / remove target locations
 - Add / remove role categories
-- Edit company list
+- Edit the company list
 - Edit job listings
-- Modify your profile chips shown in the header
+- Modify the profile chips shown in the header
 
 Hit **Export** to save your changes as a new `.html` file.
 
 ---
 
-## Tech stack
+## 🧱 Architecture decision
+
+This is a **deliberate single-file architecture** — UI, state, logic, and data all live in one `.html` file.
+
+- ✅ **Zero build tooling** — no Webpack, no Node, no `npm install`
+- ✅ **Zero dependencies** — only two Google Fonts and Tabler Icons (CDN, optional)
+- ✅ **Instant portability** — email it, drop it on a USB stick, open it offline
+- ✅ **Stateless by design** — nothing persists without an explicit Export
+
+For a personal productivity tool with a single user, this is the correct tradeoff. A React + backend stack would add complexity without adding value.
+
+---
+
+## 🧰 Tech stack
 
 | Layer | Choice |
 |-------|--------|
 | Structure | Semantic HTML5 |
-| Styling | CSS custom properties, CSS Grid, no framework |
+| Styling | CSS custom properties, CSS Grid — no framework |
 | Logic | Vanilla ES6+ JavaScript |
 | Icons | [Tabler Icons](https://tabler.io/icons) (CDN) |
 | Fonts | Syne, DM Sans, DM Mono (Google Fonts CDN) |
 | Build | None |
-| Dependencies | 0 |
+| Dependencies | **0** |
 
 ---
 
-## Target profile
+## 👤 Target profile
 
 Built around a senior profile in **EPC / Energy / Infrastructure**:
 
-- Roles: Senior Cost Manager, Quantity Surveyor, Commercial Manager, Procurement Manager
-- Sectors: EPC/EPCC, BESS / Renewable Energy, Infrastructure
-- Markets: UAE · KSA · Qatar · UK · Netherlands · Ireland · Norway
-- Experience: 7+ years, Samsung C&T / Gleeds / TCE background
+- **Roles** — Senior Cost Manager · Quantity Surveyor · Commercial Manager · Procurement Manager
+- **Sectors** — EPC/EPCC · BESS / Renewable Energy · Infrastructure
+- **Markets** — UAE · KSA · Qatar · UK · Netherlands · Ireland · Norway
+- **Experience** — 7+ years (Samsung C&T / Gleeds / TCE)
 
-The role categories, company list, and platform selection all reflect this context — but the tool is fully generic and reusable for any senior job search with different targets.
+The role categories, company list, and platform selection reflect this context — but the tool is fully generic and reusable for any senior job search with different targets.
 
 ---
 
-## License
+## 📄 License
 
-MIT — fork it, adapt it, make it your own.
+**MIT** — fork it, adapt it, make it your own.
+
+<div align="center">
+<br>
+
+*Built by [Darsh](https://github.com/AIMLDS7) · Growth is a life.*
+
+</div>
