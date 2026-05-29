@@ -12,6 +12,8 @@
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
+[![▶ Launch the App](https://img.shields.io/badge/▶_Launch_the_App-Live_Demo-success?style=for-the-badge)](https://htmlpreview.github.io/?https://github.com/AIMLDS7/JobSearch_HQ/blob/main/DG_JobSearch_HQ_v5.0.html)
+
 ![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen?style=flat-square)
 ![Build](https://img.shields.io/badge/build-none-blue?style=flat-square)
 ![Single File](https://img.shields.io/badge/architecture-single--file-orange?style=flat-square)
@@ -20,7 +22,7 @@
 
 <br>
 
-![screenshot](screenshot.png)
+<img src="https://raw.githubusercontent.com/AIMLDS7/JobSearch_HQ/main/Jobsearch.png" alt="Job Search HQ screenshot" width="100%">
 
 </div>
 
@@ -29,7 +31,9 @@
 ## 📖 Table of Contents
 
 - [Why it exists](#-why-it-exists)
+- [By the numbers](#-by-the-numbers)
 - [Features](#-features)
+- [How the data flows](#-how-the-data-flows)
 - [Quick start](#-quick-start)
 - [Keyboard shortcuts](#-keyboard-shortcuts)
 - [Customisation](#-customisation)
@@ -46,6 +50,30 @@ Most job searches are chaotic — a dozen browser tabs, lost bookmarks, and no s
 
 Open one HTML file. Everything runs locally in your browser. **No server, no login, no subscription.**
 
+▶ **[Launch the live app](https://htmlpreview.github.io/?https://github.com/AIMLDS7/JobSearch_HQ/blob/main/DG_JobSearch_HQ_v5.0.html)** — or open [`DG_JobSearch_HQ_v5.0.html`](DG_JobSearch_HQ_v5.0.html) directly.
+
+---
+
+## 📊 By the numbers
+
+![Platforms](https://img.shields.io/badge/Job_Platforms-32-2563eb?style=for-the-badge)
+![Gov Portals](https://img.shields.io/badge/Gov_Portals-14-7c3aed?style=for-the-badge)
+![Companies](https://img.shields.io/badge/Target_Companies-32+-0891b2?style=for-the-badge)
+![Modules](https://img.shields.io/badge/Modules-8-ea580c?style=for-the-badge)
+![Dependencies](https://img.shields.io/badge/Dependencies-0-16a34a?style=for-the-badge)
+
+### Platform directory by region
+
+```mermaid
+pie showData
+    title Job platforms by region
+    "UK / EU" : 18
+    "MENA / Gulf" : 7
+    "Asia" : 7
+```
+
+> *Charts render natively on GitHub via Mermaid — no images, no external services. Adjust the numbers above to match your live directory.*
+
 ---
 
 ## ⚡ Features
@@ -61,6 +89,25 @@ Open one HTML file. Everything runs locally in your browser. **No server, no log
 | 🎯 | **ATS Matcher** | Paste a job description; score your CV against it and surface missing keywords before you submit |
 | 💬 | **Interview Prep** | Role-specific question banks for Cost Manager, Commercial Manager, Procurement, and Renewable Energy roles |
 | ⏰ | **Timing Intelligence** | Live widget showing optimal application time based on recruiter working hours across target time zones |
+
+---
+
+## 🔄 How the data flows
+
+The application tracker models a real recruitment funnel — every entry moves through a defined pipeline:
+
+```mermaid
+flowchart LR
+    S[Search Engine] --> P[Platform Directory]
+    P --> B[Bookmarked]
+    B --> A[Applied]
+    A --> I[Interview]
+    I --> O[Offer]
+    A -.rejected.-> X[Closed]
+    I -.rejected.-> X
+    B -.->|JSON export| D[(Local Backup)]
+    D -.->|JSON import| B
+```
 
 ---
 
